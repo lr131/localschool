@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+        <head>
+	    <meta charset="utf-8">
+            <title>Уютненькая локалочка</title>
+            <meta http-equiv="Content-Type" Content="text/html; Charset=utf8"> <!-- Эта строка указывает тип контента на странице (текст/хтмл) и, самое главное, КОДИРОВКУ, блять!(Charset=utf8)-->
+	    <meta http-equiv ="Page-Enter" Content="RevealTrans(Duration=3.0, Transition=21)"> <!--Эффект появления страницы-->
+	    <meta http-equiv ="Page- Exit " Content="RevealTrans(Duration=3.0, Transition=0)"> <!--Эффект исчезновения страницы-->
+            <!-- Bootstrap core CSS -->
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+             <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--             <link rel="stylesheet" href="{% static 'css/ie10-viewport-bug-workaround.css' %}"> -->
+            <link rel='icon' href="{% static 'favicon.ico'' %}" type='image/x-icon'>
+            <script src="{% static 'js/bootstrap.js' %}"></script>
+            <script src="{% static 'js/bootstrap.min.js' %}"></script>
+            <script src="{% static 'js/npm.js' %}"></script>
+            <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+            <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+		<script src="{% static 'js/html5shiv.min.js' %}"></script>
+		<script src="{% static 'js/respond.min.js' %}"></script>
+	    <![endif]-->
+	</head>
+    <body>
+      <!-- Header -->
+      <div class="slider">
+	  <div class="container">
+	      <div class="row">
+		  <div class="col-md-12">
+		      <H2 align='center'> Локальная страница Школы </H2>
+		  </div>
+	      </div>
+	  </div>
+      </div>
+      <!-- Navi -->
+      <div class="container">
+        <div class="row">
+           <div class="col-md-12">
+              <nav class="navbar navbar-default" role="navigation">
+                   <div class="navbar-header">
+                             
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                                      </button> <a class="navbar-brand" a href='http://www.school-1.cherobr.ru/' target='_blank'>Сайт школы в сети</a>
+                   </div>
+                                                    
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       <ul class="nav navbar-nav">
+                           <li>
+        <!--               <li class="active"> -->
+                               <a target='_blank'>Расписание уроков</a>
+                           </li>
+                           <li>
+                               <a target='_blank'>Изменения в расписании</a>
+                          </li>
+                          <li>
+                               <a target='_blank'> Расписание звонков </a>
+                          </li>
+			  <li>
+			       <a target='_blank'> План работы <b>(актуальный) </b> </a>
+                          </li>
+		      </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                         <li>
+                              <a href="#">Link</a>
+                         </li>
+                     </ul>
+		  </div>
+                                                    
+	      </nav>
+	    </div>
+	</div>
+    </div>
+<div class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--<div id="cntr" style="position:absolute; left:250px; top:252px; border: 5px;  width:54%;  z-index:5">-->
+                    <!--<hr>
+                    <H4 align='center'> <font color='red'> <b>ВНИМАНИЕ!
+                    <br>
+                    C 2015-01-23 доступ в интернет осуществляется только по "белым спискам" образовательных сайтов!
+                    <br>
+                    В случае, если у вас нет связи, либо заблокированы нужные для работы сайты, необходимо составить их список и обратиться с ним в кабинет #221 к лаборанту.
+                    <br></b></font></H4>
+                    <hr>-->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Дата новости -  <b>2015-11-11 </div>
+                        <div class="panel-body">
+                        Выставлено расписание (постоянное!) См. Меню </b>
+                        </div>
+                </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading"> Дата новости -  <b>2015-12-14 </div>
+                        <div class="panel-body">
+                        Выставлен план работы на <i>декабрь</i></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</html>

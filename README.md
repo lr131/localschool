@@ -25,7 +25,7 @@
 4. Команда `which virtualenvwrapper.sh` покажет путь к файлу virtualenvwrapper.sh. 
 5. В домашней директории открываем .bashrc и записываем туда строки 
     
-    `export WORKON_HOME=$HOME/.virtualenvs #здесь все окружения будут храниться`
+    `export WORKON_HOME=$HOME/.virtualenvs #здесь все окружения будут храниться`  
     `source *путь, который выдал шаг 4*/virtualenvwrapper.sh`
     
 6. В консоли выполняем `source .bashrc` - всё, наши команды работают.

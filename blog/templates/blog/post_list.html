@@ -7,4 +7,11 @@
             <div class="panel-body"> <a href="">{{ post.text|linebreaks }}</a> </div>
 	</div>
         {% endfor %}
+    <div class="col-md-8">
+        <h2>Добавление Новости</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default" >Save</button>
+        </form>
+    </div>   
     {% endblock content %}

@@ -1,6 +1,5 @@
-Что это
+Описание
 ===================
-
 
 Небольшой наипростейший сайт для внутреннего пользования школы
 
@@ -25,7 +24,7 @@
 3. Далее ставим обертку `pip install virtualenvwrapper ` . 
 4. Команда `which virtualenvwrapper.sh` покажет путь к файлу virtualenvwrapper.sh. 
 5. В домашней директории открываем .bashrc и записываем туда строки 
-
+    
     `export WORKON_HOME=$HOME/.virtualenvs #здесь все окружения будут храниться`
     `source *путь, который выдал шаг 4*/virtualenvwrapper.sh`
     

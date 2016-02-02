@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
+from django.core.files import File
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-from blog.forms import PostForm
-from .models import Post
+from blog.forms import PostForm, RaspForm
+from .models import Post, Rasp
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -48,3 +49,21 @@ def post_edit(request, pk):
                 post.published_date = timezone.now()
                 post.save()
         return redirect('blog.views.post_list')
+    
+#@login_required
+def rasp_list(request):
+    form = RaspForm()
+    return render(request, 'blog/raspisanie.html', {'form': form})
+
+def rasp_list(request):
+    return render(request, 'blog/raspisanie.html')
+
+def rasp_change(request):
+    return render(request, 'blog/101.html')
+
+def rasp_zv(request):
+    return render(request, 'blog/zv_all.html')
+
+def plan_page(request):
+    form = PostForm()
+    return render(request, 'blog/plan_page.html', {'form': form})

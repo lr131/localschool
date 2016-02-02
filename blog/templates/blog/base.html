@@ -30,7 +30,7 @@
 	  <div class="container">
 	      <div class="row">
 		  <div class="col-md-12">
-		      <H2 align='center'> Локальная страница Школы </H2>
+		      <H2 align='center'> <a href="{% url "post_list" %}"> Локальная страница Школы </a> </H2>
 		  </div>
 	      </div>
 	  </div>
@@ -51,17 +51,17 @@
                        <ul class="nav navbar-nav">
                            <li>
         <!--               <li class="active"> -->
-                               <a target='_blank'>Расписание уроков</a>
+                               <a href="{% url "rasp_list" %}" target='_blank'>Расписание уроков</a>
                            </li>
                            <li>
-                               <a target='_blank'>Изменения в расписании</a>
+                               <a href="{% url "rasp_change" %}" target='_blank'>Изменения в расписании</a>
                           </li>
                           <li>
-                               <a target='_blank'> Расписание звонков </a>
+                               <a href=" {% url "rasp_zv" %} " target='_blank'> Расписание звонков </a>
                           </li>
 			  <li>
-			       <a target='_blank'> План работы <b>(актуальный) </b> </a>
-                          </li>
+			       <a href="{% url "plan_page" %}" target='_blank'> План работы <b>(актуальный) </b> </a>
+                          </li> 
 		      </ul>
                      <ul class="nav navbar-nav navbar-right">
                          <li>

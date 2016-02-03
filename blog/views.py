@@ -4,7 +4,7 @@ from django.core.files import File
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-from blog.forms import PostForm, RaspForm
+from blog.forms import PostForm, RaspForm, UploadFileForm
 from .models import Post, Rasp
 
 def post_list(request):
@@ -58,6 +58,9 @@ def rasp_list(request):
 def rasp_list(request):
     return render(request, 'blog/raspisanie.html')
 
+def table_list(request):
+    return render(request, 'blog/table.html')
+
 def rasp_change(request):
     return render(request, 'blog/101.html')
 
@@ -65,5 +68,14 @@ def rasp_zv(request):
     return render(request, 'blog/zv_all.html')
 
 def plan_page(request):
-    form = PostForm()
+    form = UploadFileForm()
     return render(request, 'blog/plan_page.html', {'form': form})
+
+@login_required
+def upload_file(request):
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            # file is saved
+            form.save()
+    return redirect('blog.views.plan_page')

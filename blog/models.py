@@ -32,5 +32,4 @@ class Rasp(models.Model):
     
 
 class UploadFile(models.Model):
-    name = models.CharField(max_length=255)
     fileplan = models.FileField(upload_to='plan/%Y/%m/')

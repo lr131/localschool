@@ -32,4 +32,4 @@ class UploadFileForm(forms.ModelForm):
             self.fields[name].widget.attrs['class'] = 'form-control' 
     class Meta:
         model = UploadFile
-        fields = ('name','fileplan', )
+        fields = ('fileplan', )
